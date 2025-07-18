@@ -1,0 +1,161 @@
+body{
+    background: black;
+}
+.header{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: center;
+    margin: 0px;
+    top:0;
+    left:0;
+    right:0;
+    background: rgba(128, 128, 128, 0.218);
+    height:9vw;
+    
+}
+.left-section,.right-section{
+    font-family: "Rock Salt", cursive;
+    font-weight: bolder;
+    font-size: 5vw;
+    font-style: normal;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    color: chartreuse;
+}
+.memory-game{
+    margin: 4vw;
+    display: flex;
+    grid-template-columns:repeat(auto-fill,minmax(25vw,1fr));
+    gap:6vw;   
+}
+
+.game-screen{
+    width:65vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(12vw,1fr));
+    gap:2vw;
+    
+    
+}
+.you-win{
+    font-family: "Rock Salt";
+    font-weight: bolder;
+    color: aqua; 
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timer{
+    width:12vw;
+}
+.card{
+    margin-top: 3vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    width:12vw;
+    display: flex;
+    height: 10vw;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    border-color: yellow;
+    border-width: 3px;
+    padding: 5px;
+}
+.card-face{
+    transform-style: matrix3d();
+    transition: transform 0.6s;
+}
+.image{
+    width:100%;
+    height: 100%;
+    cursor: pointer;
+}
+.card .card-face {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .card.flipped .card-face {
+    transform: rotateY(180deg);
+  }
+  
+  .inner-card, .outer-card{
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+
+  }
+  
+  .outer-card {
+    transform: rotateY(180deg);
+  }
+.start-game{
+    width: 30%;
+    margin-left: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(242, 120, 20);
+    margin-top: 11vw;
+    height: 4vw;
+    font-family: "Fontdiner Swanky";
+    font-size: 2vw;
+    border-radius: 40%;
+    border: solid;
+    border-width: 6px;
+    border-color: beige;
+    cursor: pointer;
+}
+.timer-setting,.user-score{
+    margin-top: 5vw;
+    margin-left: 1vw;
+    width: 9vw;
+    height: 7vw;
+    background: cyan;
+    font-family: "Fontdiner Swanky";
+    font-size: 2vw;
+    border:solid;
+    border-width: 5px;
+    border-radius: 50%;
+}
+@media screen and (max-width: 400px) {
+    .header {
+      height: 20vw;
+    }
+  
+    .left-section, .right-section {
+      font-size: 7vw;
+    }
+  
+    .start-game {
+      width: 80%;
+      margin-left: 10%;
+      height: 10vw;
+      font-size: 4vw;
+    }
+  
+    .timer-setting, .user-score {
+      width: 18vw;
+      height: 15vw;
+      font-size: 4vw;
+    }
+    .memory-game {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .game-screen {
+      width: 90vw;
+      grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
+    }
+  }
+  
